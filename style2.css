@@ -1,0 +1,193 @@
+/* Import Font Urban & Display dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* Variable Warna & Font Tema Graffiti Urban */
+:root {
+    --bg-color: #0f0f13;
+    /* Hitam aspal/malam urban */
+    --card-bg: #181820;
+    /* Abu-abu gelap kontras */
+    --text-color: #f0f0f0;
+    /* Putih cerah */
+    --neon-pink: #ff007f;
+    /* Merah muda graffiti neon */
+    --neon-yellow: #ccff00;
+    /* Kuning stabilo / spray paint */
+    --neon-cyan: #00f0ff;
+    /* Biru cyan elektrik */
+    --border-color: #000000;
+    /* Outlines kaku */
+    --font-street: 'Permanent Marker', cursive;
+    /* Font ala spidol/piloks */
+    --font-body: 'Space Grotesk', sans-serif;
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Tekstur dinding bata/aspal halus */
+    background-image: radial-gradient(#22222e 15%, transparent 16%);
+    background-size: 20px 20px;
+}
+
+/* Headings dengan Font Graffiti */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-street);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--neon-pink);
+    font-size: 2.2rem;
+}
+
+h2 {
+    color: var(--neon-yellow);
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: var(--neon-cyan);
+    font-size: 1.4rem;
+}
+
+/* Header & Navigasi */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 4px solid var(--neon-yellow);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 0;
+    text-shadow: 2px 2px 0px var(--neon-cyan);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-street);
+    font-size: 1.1rem;
+    margin-left: 10px;
+    padding: 5px 12px;
+    border: 2px solid var(--neon-cyan);
+    background-color: var(--bg-color);
+    box-shadow: 3px 3px 0px var(--neon-pink);
+    transition: all 0.1s ease;
+}
+
+nav a:hover {
+    background-color: var(--neon-cyan);
+    color: #000;
+    box-shadow: 5px 5px 0px var(--neon-yellow);
+}
+
+/* Section & Garis Pembatas */
+section {
+    margin-bottom: 35px;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-yellow), var(--neon-cyan));
+    margin: 30px 0;
+}
+
+/* Kartu Proyek (Ala Stiker/Flyer Street) */
+article,
+.card {
+    background-color: var(--card-bg);
+    border: 3px solid var(--text-color);
+    padding: 20px;
+    border-radius: 2px;
+    /* Efek bayangan tegas kaku ala sticker cut */
+    box-shadow: 6px 6px 0px var(--neon-pink);
+    margin-top: 15px;
+    position: relative;
+}
+
+/* Tombol Aksi / CTA (Graffiti Button) */
+button,
+.btn {
+    background-color: var(--neon-yellow);
+    color: #000;
+    border: 3px solid #000;
+    padding: 12px 24px;
+    font-family: var(--font-street);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px var(--neon-cyan);
+    transition: all 0.1s ease;
+    transform: rotate(-1deg);
+    /* Efek sedikit miring ala graffiti */
+    display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+    transform: rotate(1deg) scale(1.03);
+    box-shadow: 7px 7px 0px var(--neon-pink);
+    background-color: var(--neon-pink);
+    color: #fff;
+}
+
+button:active,
+.btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--neon-cyan);
+}
+
+/* List / Daftar */
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+li::marker {
+    color: var(--neon-yellow);
+}
+
+/* Tautan (Links) */
+a {
+    color: var(--neon-cyan);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--neon-yellow);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-family: var(--font-street);
+    font-size: 1rem;
+    padding-top: 20px;
+    border-top: 4px solid var(--neon-pink);
+    color: var(--neon-yellow);
+}
